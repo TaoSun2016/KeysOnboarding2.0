@@ -22,21 +22,6 @@ namespace KeysOnboarding2._0.Controllers
             return View(productSolds.ToList());
         }
 
-        // GET: ProductSolds/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ProductSold productSold = db.ProductSolds.Find(id);
-            if (productSold == null)
-            {
-                return HttpNotFound();
-            }
-            return View(productSold);
-        }
-
         // GET: ProductSolds/Create
         public ActionResult Create()
         {

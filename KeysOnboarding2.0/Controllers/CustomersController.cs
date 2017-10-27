@@ -21,21 +21,6 @@ namespace KeysOnboarding2._0.Controllers
             return View(db.Customers.ToList());
         }
 
-        // GET: Customers/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customer);
-        }
-
         // GET: Customers/Create
         public ActionResult Create()
         {
