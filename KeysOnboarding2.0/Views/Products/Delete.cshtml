@@ -29,19 +29,18 @@
 
     </dl>
 
-    <div>
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <div class="col-md-offset-8 col-md-4">
-                        <input type="submit" value="Delete" class="btn btn-danger" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-offset-8 col-md-4">
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
+
             </div>
-        }
-            
+        </div>
+    }
+
 </div>
